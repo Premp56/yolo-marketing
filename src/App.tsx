@@ -2,11 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   TrendingUp, 
-  Search, 
-  Share2, 
-  PenTool, 
   BarChart3, 
-  Mail,
   ArrowRight,
   MousePointerClick,
   Globe,
@@ -18,7 +14,7 @@ import Navbar from './components/Navbar';
 import { SectionHeader, ProjectCard, FadeSection, SwipeRevealLine } from './components/SectionElements';
 import { ServiceCard } from './components/ServiceCard';
 import LogoSplitLoader from './components/LogoSplitLoader';
-import { unblockAudio, playHoverSound } from './utils/audio';
+import { playHoverSound } from './utils/audio';
 import { useInView } from 'framer-motion';
 import { Counter } from './components/Counter';
 

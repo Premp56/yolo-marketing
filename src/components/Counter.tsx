@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import { useMotionValue, useSpring, useInView, animate } from "framer-motion";
+import { useMotionValue, useSpring, useInView } from "framer-motion";
 
 interface CounterProps {
   value: number;
