@@ -263,33 +263,35 @@ const App: React.FC = () => {
         </FadeSection>
 
         {/* STATS SECTION */}
-        <FadeSection id="stats" style={{ padding: 'clamp(60px, 10vw, 100px) var(--section-padding-x)', background: 'var(--accent-color)', color: 'black', minHeight: 'auto' }}>
+        <FadeSection id="stats" style={{ padding: 'clamp(40px, 8vw, 100px) var(--section-padding-x)', background: 'var(--accent-color)', color: 'black', minHeight: 'auto' }}>
           <div style={{ 
             display: 'grid', 
-            gridTemplateColumns: 'repeat(auto-fit, minmax(clamp(160px, 45vw, 300px), 1fr))', 
-            gap: 'clamp(30px, 5vw, 60px)',
-            width: '100%'
+            gridTemplateColumns: 'repeat(auto-fit, minmax(min(140px, 100%), 1fr))', 
+            gap: 'clamp(20px, 4vw, 60px)',
+            width: '100%',
+            maxWidth: '1200px',
+            margin: '0 auto'
           }}>
-            <div className="mono" style={{ textAlign: 'center' }}>
-              <div style={{ fontSize: '0.7rem', fontWeight: 'bold', marginBottom: '8px', opacity: 0.7, textTransform: 'uppercase' }}>Ad Spend Managed</div>
-              <div style={{ fontSize: 'clamp(2.5rem, 8vw, 4rem)', fontWeight: 'bold', lineHeight: 1 }}>
+            <div className="mono" style={{ textAlign: 'center', padding: '10px' }}>
+              <div style={{ fontSize: '0.65rem', fontWeight: 'bold', marginBottom: '8px', opacity: 0.7, textTransform: 'uppercase', letterSpacing: '0.05em' }}>Ad Spend Managed</div>
+              <div style={{ fontSize: 'clamp(2rem, 8vw, 4rem)', fontWeight: 'bold', lineHeight: 1 }}>
                 <Counter value={50} prefix="$" suffix="M+" />
               </div>
             </div>
-            <div className="mono" style={{ textAlign: 'center' }}>
-              <div style={{ fontSize: '0.7rem', fontWeight: 'bold', marginBottom: '8px', opacity: 0.7, textTransform: 'uppercase' }}>Active Clients</div>
+            <div className="mono" style={{ textAlign: 'center', padding: '10px' }}>
+              <div style={{ fontSize: '0.65rem', fontWeight: 'bold', marginBottom: '8px', opacity: 0.7, textTransform: 'uppercase', letterSpacing: '0.05em' }}>Active Clients</div>
               <div style={{ fontSize: 'clamp(2.5rem, 8vw, 4rem)', fontWeight: 'bold', lineHeight: 1 }}>
                 <Counter value={120} suffix="+" />
               </div>
             </div>
-            <div className="mono" style={{ textAlign: 'center' }}>
-              <div style={{ fontSize: '0.7rem', fontWeight: 'bold', marginBottom: '8px', opacity: 0.7, textTransform: 'uppercase' }}>Avg. ROAS</div>
+            <div className="mono" style={{ textAlign: 'center', padding: '10px' }}>
+              <div style={{ fontSize: '0.65rem', fontWeight: 'bold', marginBottom: '8px', opacity: 0.7, textTransform: 'uppercase', letterSpacing: '0.05em' }}>Avg. ROAS</div>
               <div style={{ fontSize: 'clamp(2.5rem, 8vw, 4rem)', fontWeight: 'bold', lineHeight: 1 }}>
                 <Counter value={4.8} suffix="x" decimals={1} />
               </div>
             </div>
-            <div className="mono" style={{ textAlign: 'center' }}>
-              <div style={{ fontSize: '0.7rem', fontWeight: 'bold', marginBottom: '8px', opacity: 0.7, textTransform: 'uppercase' }}>Global Reach</div>
+            <div className="mono" style={{ textAlign: 'center', padding: '10px' }}>
+              <div style={{ fontSize: '0.65rem', fontWeight: 'bold', marginBottom: '8px', opacity: 0.7, textTransform: 'uppercase', letterSpacing: '0.05em' }}>Global Reach</div>
               <div style={{ fontSize: 'clamp(2.5rem, 8vw, 4rem)', fontWeight: 'bold', lineHeight: 1 }}>
                 <Counter value={24} suffix="" />
               </div>
