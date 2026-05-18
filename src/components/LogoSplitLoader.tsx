@@ -38,7 +38,7 @@ const LogoSplitLoader: React.FC<LogoSplitLoaderProps> = ({ onComplete }) => {
   };
 
   const logoStyle: React.CSSProperties = {
-    fontSize: 'clamp(3rem, 15vw, 15vw)', // Smaller minimum font size
+    fontSize: '18vw', // Slightly larger for impact, but consistent
     fontWeight: 900,
     letterSpacing: '-0.05em',
     color: 'white',
@@ -57,7 +57,7 @@ const LogoSplitLoader: React.FC<LogoSplitLoaderProps> = ({ onComplete }) => {
         style={{ ...halfStyle, top: 0, alignItems: 'flex-end' }}
       >
         <div style={{ position: 'relative', height: '50svh', width: '100%' }}>
-           <h1 style={{ ...logoStyle, bottom: 'clamp(-7.5vw, -4vw, -4vw)', left: '50%', transform: 'translateX(-50%)' }}>
+           <h1 style={{ ...logoStyle, bottom: '-9vw', left: '50%', transform: 'translateX(-50%)' }}>
              YOLO
            </h1>
         </div>
@@ -71,7 +71,7 @@ const LogoSplitLoader: React.FC<LogoSplitLoaderProps> = ({ onComplete }) => {
         style={{ ...halfStyle, bottom: 0, alignItems: 'flex-start' }}
       >
         <div style={{ position: 'relative', height: '50svh', width: '100%' }}>
-           <h1 style={{ ...logoStyle, top: 'clamp(-7.5vw, -4vw, -4vw)', left: '50%', transform: 'translateX(-50%)' }}>
+           <h1 style={{ ...logoStyle, top: '-9vw', left: '50%', transform: 'translateX(-50%)' }}>
              YOLO
            </h1>
         </div>

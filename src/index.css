@@ -29,38 +29,18 @@ html, body {
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
-  width: 100%;
+  overflow-x: hidden !important;
+  width: 100vw;
   position: relative;
-}
-
-body {
   margin: 0;
-}
-
-code, pre, .mono {
-  font-family: var(--font-mono);
-}
-
-::-webkit-scrollbar {
-  width: 5px;
-}
-
-::-webkit-scrollbar-track {
-  background: var(--bg-color);
-}
-
-::-webkit-scrollbar-thumb {
-  background: #333;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #444;
+  padding: 0;
 }
 
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 100px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
 section {
