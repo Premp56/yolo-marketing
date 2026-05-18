@@ -120,7 +120,7 @@ const App: React.FC = () => {
           flexDirection: 'column', 
           justifyContent: 'center', 
           background: 'radial-gradient(circle at 80% 20%, rgba(0, 255, 65, 0.05) 0%, transparent 50%)',
-          padding: '0 10%' 
+          padding: '0 var(--section-padding-x)' 
         }}>
           <div style={{ position: 'relative', zIndex: 10 }}>
             {!loading && (
@@ -130,25 +130,25 @@ const App: React.FC = () => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.2 }}
                   className="mono"
-                  style={{ color: 'var(--accent-color)', marginBottom: '24px', fontSize: '0.9rem', letterSpacing: '0.2em' }}
+                  style={{ color: 'var(--accent-color)', marginBottom: '24px', fontSize: 'clamp(0.7rem, 2vw, 0.9rem)', letterSpacing: '0.2em' }}
                 >
                   [ YOUR ONLINE LEVERAGE & OPTIMIZATION ]
                 </motion.div>
                 
                 <SwipeRevealLine delay={0.2}>
-                  <h1 style={{ fontSize: 'clamp(3.5rem, 12vw, 9rem)', fontWeight: 600, lineHeight: 0.9, letterSpacing: '-0.05em' }}>
+                  <h1 style={{ fontSize: 'clamp(3rem, 12vw, 9rem)', fontWeight: 600, lineHeight: 0.9, letterSpacing: '-0.05em' }}>
                     WE SCALE
                   </h1>
                 </SwipeRevealLine>
 
                 <SwipeRevealLine delay={0.4}>
-                  <h1 style={{ fontSize: 'clamp(3.5rem, 12vw, 9rem)', fontWeight: 600, lineHeight: 0.9, letterSpacing: '-0.05em' }}>
+                  <h1 style={{ fontSize: 'clamp(3rem, 12vw, 9rem)', fontWeight: 600, lineHeight: 0.9, letterSpacing: '-0.05em' }}>
                     <span style={{ color: 'white', WebkitTextStroke: '1px rgba(255,255,255,0.2)', WebkitTextFillColor: 'transparent' }}>MODERN</span>
                   </h1>
                 </SwipeRevealLine>
 
                 <SwipeRevealLine delay={0.6} style={{ marginBottom: '40px' }}>
-                  <h1 style={{ fontSize: 'clamp(3.5rem, 12vw, 9rem)', fontWeight: 600, lineHeight: 0.9, letterSpacing: '-0.05em' }}>
+                  <h1 style={{ fontSize: 'clamp(3rem, 12vw, 9rem)', fontWeight: 600, lineHeight: 0.9, letterSpacing: '-0.05em' }}>
                     BRANDS<span style={{ color: 'var(--accent-color)' }}>.</span>
                   </h1>
                 </SwipeRevealLine>
@@ -160,7 +160,7 @@ const App: React.FC = () => {
                   style={{ display: 'flex', gap: '30px', alignItems: 'flex-start', flexWrap: 'wrap' }}
                 >
                   <p style={{ 
-                    fontSize: '1.2rem', 
+                    fontSize: 'clamp(1rem, 3vw, 1.2rem)', 
                     color: 'var(--text-secondary)', 
                     maxWidth: '500px',
                     lineHeight: 1.5
@@ -182,9 +182,9 @@ const App: React.FC = () => {
                       background: 'transparent',
                       border: '1px solid var(--accent-color)',
                       color: 'var(--accent-color)',
-                      padding: '20px 40px',
+                      padding: 'clamp(15px, 3vw, 20px) clamp(30px, 5vw, 40px)',
                       cursor: 'pointer',
-                      fontSize: '0.9rem',
+                      fontSize: '0.8rem',
                       display: 'flex',
                       alignItems: 'center',
                       gap: '12px'
@@ -219,12 +219,12 @@ const App: React.FC = () => {
         </FadeSection>
 
         {/* SERVICES SECTION */}
-        <FadeSection id="capabilities" style={{ borderTop: '1px solid var(--grid-color)', padding: '100px 10%' }}>
+        <FadeSection id="capabilities" style={{ borderTop: '1px solid var(--grid-color)', padding: '100px var(--section-padding-x)' }}>
           <ServicesGrid services={services} />
         </FadeSection>
 
         {/* WORKS SECTION */}
-        <FadeSection id="works" style={{ padding: '100px 10%' }}>
+        <FadeSection id="works" style={{ padding: '100px var(--section-padding-x)' }}>
           <SectionHeader title="Selected Case Studies" subtitle="Proof of performance in the wild." />
           <div style={{ marginTop: '60px' }}>
             {[
@@ -263,29 +263,29 @@ const App: React.FC = () => {
         </FadeSection>
 
         {/* STATS SECTION */}
-        <FadeSection id="stats" style={{ padding: '80px 10%', background: 'var(--accent-color)', color: 'black', minHeight: 'auto' }}>
+        <FadeSection id="stats" style={{ padding: '80px var(--section-padding-x)', background: 'var(--accent-color)', color: 'black', minHeight: 'auto' }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap', gap: '40px' }}>
             <div className="mono">
               <div style={{ fontSize: '0.8rem', fontWeight: 'bold', marginBottom: '8px', opacity: 0.7 }}>Ad Spend Managed</div>
-              <div style={{ fontSize: '3rem', fontWeight: 'bold' }}>
+              <div style={{ fontSize: 'clamp(2rem, 5vw, 3rem)', fontWeight: 'bold' }}>
                 <Counter value={50} prefix="$" suffix="M+" />
               </div>
             </div>
             <div className="mono">
               <div style={{ fontSize: '0.8rem', fontWeight: 'bold', marginBottom: '8px', opacity: 0.7 }}>Active Clients</div>
-              <div style={{ fontSize: '3rem', fontWeight: 'bold' }}>
+              <div style={{ fontSize: 'clamp(2rem, 5vw, 3rem)', fontWeight: 'bold' }}>
                 <Counter value={120} suffix="+" />
               </div>
             </div>
             <div className="mono">
               <div style={{ fontSize: '0.8rem', fontWeight: 'bold', marginBottom: '8px', opacity: 0.7 }}>Avg. ROAS</div>
-              <div style={{ fontSize: '3rem', fontWeight: 'bold' }}>
+              <div style={{ fontSize: 'clamp(2rem, 5vw, 3rem)', fontWeight: 'bold' }}>
                 <Counter value={4.8} suffix="x" decimals={1} />
               </div>
             </div>
             <div className="mono">
               <div style={{ fontSize: '0.8rem', fontWeight: 'bold', marginBottom: '8px', opacity: 0.7 }}>Global Reach</div>
-              <div style={{ fontSize: '3rem', fontWeight: 'bold' }}>
+              <div style={{ fontSize: 'clamp(2rem, 5vw, 3rem)', fontWeight: 'bold' }}>
                 <Counter value={24} suffix=" Countries" />
               </div>
             </div>
@@ -293,10 +293,10 @@ const App: React.FC = () => {
         </FadeSection>
 
         {/* PHILOSOPHY SECTION */}
-        <FadeSection id="philosophy" style={{ padding: '100px 10%' }}>
+        <FadeSection id="philosophy" style={{ padding: '100px var(--section-padding-x)' }}>
           <SectionHeader title="Why Us" subtitle="We don't just 'manage' accounts. We own the outcome." />
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '80px' }}>
-            <p style={{ fontSize: '1.8rem', lineHeight: 1.4, color: 'var(--text-secondary)' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))', gap: 'clamp(40px, 8vw, 80px)' }}>
+            <p style={{ fontSize: 'clamp(1.2rem, 4vw, 1.8rem)', lineHeight: 1.4, color: 'var(--text-secondary)' }}>
               Most agencies provide reports. We provide <span style={{ color: 'white' }}>revenue.</span> Our methodology blends 
               creative intuition with rigorous algorithmic testing to find the "unfair advantage" for your brand.
             </p>
@@ -314,11 +314,11 @@ const App: React.FC = () => {
         </FadeSection>
 
         {/* TEAM SECTION */}
-        <FadeSection id="team" style={{ padding: '100px 10%' }}>
+        <FadeSection id="team" style={{ padding: '100px var(--section-padding-x)' }}>
           <SectionHeader title="Team" subtitle="The architects of digital dominance." />
           <div style={{ 
             display: 'grid', 
-            gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', 
+            gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 250px), 1fr))', 
             gap: '40px',
             marginTop: '60px'
           }}>
@@ -378,9 +378,9 @@ const App: React.FC = () => {
         </FadeSection>
 
         {/* CONTACT SECTION */}
-        <FadeSection id="contact" style={{ textAlign: 'center', padding: '150px 10%', borderTop: '1px solid var(--grid-color)' }}>
+        <FadeSection id="contact" style={{ textAlign: 'center', padding: '100px var(--section-padding-x)', borderTop: '1px solid var(--grid-color)' }}>
           <SectionHeader title="Let's Talk" />
-          <h2 style={{ fontSize: 'clamp(2.5rem, 6vw, 6rem)', marginBottom: '40px', fontWeight: 600 }}>Ready for the next level?</h2>
+          <h2 style={{ fontSize: 'clamp(2rem, 6vw, 6rem)', marginBottom: '40px', fontWeight: 600 }}>Ready for the next level?</h2>
           <motion.button
             onHoverStart={playHoverSound}
             whileHover={{ 
@@ -395,7 +395,7 @@ const App: React.FC = () => {
               background: 'var(--accent-color)',
               border: 'none',
               color: 'black',
-              padding: '25px 60px',
+              padding: 'clamp(15px, 3vw, 25px) clamp(30px, 5vw, 60px)',
               cursor: 'pointer',
               fontSize: '1rem',
               fontWeight: 'bold',
@@ -405,12 +405,12 @@ const App: React.FC = () => {
             BOOK A GROWTH AUDIT [FREE]
           </motion.button>
           
-          <div style={{ display: 'flex', justifyContent: 'center', gap: '60px' }} className="mono">
-            <div style={{ textAlign: 'left' }}>
+          <div style={{ display: 'flex', justifyContent: 'center', gap: 'clamp(20px, 5vw, 60px)', flexWrap: 'wrap' }} className="mono">
+            <div style={{ textAlign: 'left', minWidth: '200px' }}>
               <div style={{ color: 'var(--accent-color)', fontSize: '0.7rem', marginBottom: '10px' }}>/EMAIL</div>
               <a href="mailto:growth@yolo.agency">growth@yolo.agency</a>
             </div>
-            <div style={{ textAlign: 'left' }}>
+            <div style={{ textAlign: 'left', minWidth: '200px' }}>
               <div style={{ color: 'var(--accent-color)', fontSize: '0.7rem', marginBottom: '10px' }}>/OFFICE</div>
               <p>Digital Nomad / Global</p>
             </div>

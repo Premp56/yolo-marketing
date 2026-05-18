@@ -50,7 +50,7 @@ export const SectionHeader: React.FC<SectionHeaderProps> = ({ title, subtitle })
       >
         /{title.toLowerCase().replace(/\s+/g, '-')}
       </div>
-      <h2 style={{ fontSize: '3.5rem', maxWidth: '800px', lineHeight: '1.1' }}>
+      <h2 style={{ fontSize: 'clamp(2rem, 8vw, 3.5rem)', maxWidth: '800px', lineHeight: '1.1' }}>
         {subtitle || title}
       </h2>
     </div>
@@ -123,9 +123,9 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ index, title, category
         <div className="mono" style={{ fontSize: '0.8rem', color: 'inherit', marginBottom: '15px', opacity: 0.7 }}>
           [{String(index + 1).padStart(2, '0')}]
         </div>
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end' }}>
-          <h3 style={{ fontSize: '2rem', color: 'inherit' }}>{title}</h3>
-          <span className="mono" style={{ fontSize: '0.7rem', textTransform: 'uppercase', opacity: 0.5, color: 'inherit' }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', flexWrap: 'wrap', gap: '15px' }}>
+          <h3 style={{ fontSize: 'clamp(1.5rem, 5vw, 2rem)', color: 'inherit' }}>{title}</h3>
+          <span className="mono" style={{ fontSize: '0.65rem', textTransform: 'uppercase', opacity: 0.5, color: 'inherit' }}>
             {category}
           </span>
         </div>

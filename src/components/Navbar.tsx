@@ -41,7 +41,7 @@ const Navbar: React.FC = () => {
         display: 'flex',
         justifyContent: 'space-between',
         alignItems: 'center',
-        padding: '30px 10%',
+        padding: '20px var(--section-padding-x)',
         zIndex: 1000,
         mixBlendMode: 'difference',
         // Apply the direct scroll transforms only when at the top
@@ -53,13 +53,20 @@ const Navbar: React.FC = () => {
       <div className="mono" style={{ fontSize: '1.2rem', fontWeight: 'bold' }}>
         YOLO<span style={{ color: 'var(--accent-color)' }}>.</span>
       </div>
-      <div style={{ display: 'flex', gap: '40px' }} className="mono">
-        {['capabilities', 'works', 'team', 'philosophy', 'contact'].map((item) => (
-          <a key={item} href={`#${item}`} style={{ fontSize: '0.8rem', textTransform: 'uppercase', letterSpacing: '0.1em' }}>
+      <div style={{ display: 'flex', gap: '30px' }} className="mono desktop-nav">
+        {['capabilities', 'works', 'team', 'contact'].map((item) => (
+          <a key={item} href={`#${item}`} style={{ fontSize: '0.7rem', textTransform: 'uppercase', letterSpacing: '0.1em' }}>
             /{item}
           </a>
         ))}
       </div>
+      <style>{`
+        @media (max-width: 768px) {
+          .desktop-nav {
+            display: none !important;
+          }
+        }
+      `}</style>
     </motion.nav>
   );
 };

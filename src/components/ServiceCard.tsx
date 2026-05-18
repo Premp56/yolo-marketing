@@ -26,7 +26,7 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({ index, icon, title, de
       }}
       style={{ 
         background: '#0a0a0a', 
-        padding: '50px',
+        padding: 'clamp(25px, 5vw, 50px)',
         display: 'flex',
         flexDirection: 'column',
         gap: '24px',
