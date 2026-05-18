@@ -58,7 +58,7 @@ html {
 }
 
 section {
-  padding: 100px var(--section-padding-x);
+  padding: 120px var(--section-padding-x);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -67,8 +67,8 @@ section {
 
 @media (max-width: 768px) {
   section {
-    padding: 60px var(--section-padding-x);
-    min-height: auto;
+    padding: 80px var(--section-padding-x);
+    min-height: 80vh; /* Enough room for scroll-linked animations */
   }
 }
 

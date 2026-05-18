@@ -263,30 +263,35 @@ const App: React.FC = () => {
         </FadeSection>
 
         {/* STATS SECTION */}
-        <FadeSection id="stats" style={{ padding: '80px var(--section-padding-x)', background: 'var(--accent-color)', color: 'black', minHeight: 'auto' }}>
-          <div style={{ display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap', gap: '40px' }}>
-            <div className="mono">
-              <div style={{ fontSize: '0.8rem', fontWeight: 'bold', marginBottom: '8px', opacity: 0.7 }}>Ad Spend Managed</div>
-              <div style={{ fontSize: 'clamp(2rem, 5vw, 3rem)', fontWeight: 'bold' }}>
+        <FadeSection id="stats" style={{ padding: 'clamp(60px, 10vw, 100px) var(--section-padding-x)', background: 'var(--accent-color)', color: 'black', minHeight: 'auto' }}>
+          <div style={{ 
+            display: 'grid', 
+            gridTemplateColumns: 'repeat(auto-fit, minmax(clamp(160px, 45vw, 300px), 1fr))', 
+            gap: 'clamp(30px, 5vw, 60px)',
+            width: '100%'
+          }}>
+            <div className="mono" style={{ textAlign: 'center' }}>
+              <div style={{ fontSize: '0.7rem', fontWeight: 'bold', marginBottom: '8px', opacity: 0.7, textTransform: 'uppercase' }}>Ad Spend Managed</div>
+              <div style={{ fontSize: 'clamp(2.5rem, 8vw, 4rem)', fontWeight: 'bold', lineHeight: 1 }}>
                 <Counter value={50} prefix="$" suffix="M+" />
               </div>
             </div>
-            <div className="mono">
-              <div style={{ fontSize: '0.8rem', fontWeight: 'bold', marginBottom: '8px', opacity: 0.7 }}>Active Clients</div>
-              <div style={{ fontSize: 'clamp(2rem, 5vw, 3rem)', fontWeight: 'bold' }}>
+            <div className="mono" style={{ textAlign: 'center' }}>
+              <div style={{ fontSize: '0.7rem', fontWeight: 'bold', marginBottom: '8px', opacity: 0.7, textTransform: 'uppercase' }}>Active Clients</div>
+              <div style={{ fontSize: 'clamp(2.5rem, 8vw, 4rem)', fontWeight: 'bold', lineHeight: 1 }}>
                 <Counter value={120} suffix="+" />
               </div>
             </div>
-            <div className="mono">
-              <div style={{ fontSize: '0.8rem', fontWeight: 'bold', marginBottom: '8px', opacity: 0.7 }}>Avg. ROAS</div>
-              <div style={{ fontSize: 'clamp(2rem, 5vw, 3rem)', fontWeight: 'bold' }}>
+            <div className="mono" style={{ textAlign: 'center' }}>
+              <div style={{ fontSize: '0.7rem', fontWeight: 'bold', marginBottom: '8px', opacity: 0.7, textTransform: 'uppercase' }}>Avg. ROAS</div>
+              <div style={{ fontSize: 'clamp(2.5rem, 8vw, 4rem)', fontWeight: 'bold', lineHeight: 1 }}>
                 <Counter value={4.8} suffix="x" decimals={1} />
               </div>
             </div>
-            <div className="mono">
-              <div style={{ fontSize: '0.8rem', fontWeight: 'bold', marginBottom: '8px', opacity: 0.7 }}>Global Reach</div>
-              <div style={{ fontSize: 'clamp(2rem, 5vw, 3rem)', fontWeight: 'bold' }}>
-                <Counter value={24} suffix=" Countries" />
+            <div className="mono" style={{ textAlign: 'center' }}>
+              <div style={{ fontSize: '0.7rem', fontWeight: 'bold', marginBottom: '8px', opacity: 0.7, textTransform: 'uppercase' }}>Global Reach</div>
+              <div style={{ fontSize: 'clamp(2.5rem, 8vw, 4rem)', fontWeight: 'bold', lineHeight: 1 }}>
+                <Counter value={24} suffix="" />
               </div>
             </div>
           </div>

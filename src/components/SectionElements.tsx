@@ -43,14 +43,14 @@ interface SectionHeaderProps {
 
 export const SectionHeader: React.FC<SectionHeaderProps> = ({ title, subtitle }) => {
   return (
-    <div style={{ marginBottom: '60px' }}>
+    <div style={{ marginBottom: 'clamp(30px, 8vw, 60px)' }}>
       <div
         className="mono"
-        style={{ color: 'var(--accent-color)', marginBottom: '10px', fontSize: '0.9rem' }}
+        style={{ color: 'var(--accent-color)', marginBottom: '10px', fontSize: 'clamp(0.7rem, 2vw, 0.8rem)' }}
       >
         /{title.toLowerCase().replace(/\s+/g, '-')}
       </div>
-      <h2 style={{ fontSize: 'clamp(2rem, 8vw, 3.5rem)', maxWidth: '800px', lineHeight: '1.1' }}>
+      <h2 style={{ fontSize: 'clamp(2.2rem, 8vw, 3.5rem)', maxWidth: '800px', lineHeight: '1.1', fontWeight: 600 }}>
         {subtitle || title}
       </h2>
     </div>
